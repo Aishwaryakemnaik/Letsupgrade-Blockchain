@@ -1,0 +1,32 @@
+pragma solidity ^0.4.17 < 0.6.12;
+
+contract ReportCard{
+    
+    string public Name;
+    uint public RollNo;
+    string public Batch;
+    uint public MarksSubject1;
+    uint public MarksSubject2;
+    uint public MarksSubject3;
+    uint public MarksSubject4;
+    string public Status;
+    
+    function ReportCard(string newName, uint newRollNo, string newBatch, uint newMarksSubject1, uint newMarksSubject2, uint newMarksSubject3, uint newMarksSubject4, string newStatus) public{
+        
+        Name = newName;
+        RollNo = newRollNo;
+        Batch = newBatch;
+        MarksSubject1 = newMarksSubject1;
+        MarksSubject2 = newMarksSubject2;
+        MarksSubject3 = newMarksSubject3;
+        MarksSubject4 = newMarksSubject4;
+        Status = newStatus;
+        
+    }
+    
+    function getcurrentReportCard() public view returns(string, uint, string,uint, uint, uint, uint, string){
+        return ( Name, RollNo, Batch, MarksSubject1, MarksSubject2, MarksSubject3, MarksSubject4, Status);
+        
+    }
+    
+} 
